@@ -1,0 +1,25 @@
+FIREWALL CONFIGURATION DETAILS
+
+Firewall acts as a security guard for cloud resources.
+
+Rules implemented in this project:
+
+1. Allow HTTP (Port 80)
+- Purpose: Allow public users to access the website
+- Source IP range: 0.0.0.0/0
+- Protocol: TCP
+- Port: 80
+
+2. Allow SSH (Port 22) from trusted IP only
+- Purpose: Allow secure login only for project owner
+- Source IP range: <YOUR_PUBLIC_IP>/32
+- Protocol: TCP
+- Port: 22
+
+3. Default Behavior
+- Any traffic not explicitly allowed is automatically blocked.
+
+Security Validation:
+- Website opens successfully in browser
+- SSH works from authorized IP
+- SSH fails from other networks (mobile data)

@@ -1,0 +1,21 @@
+AUTO-SCALING NOTES (BEGINNER FRIENDLY)
+
+Auto-scaling automatically increases or decreases the number of VM instances
+based on system load.
+
+Configuration used in this project:
+- Minimum instances: 1
+- Maximum instances: 3
+- Scaling metric: CPU utilization
+- Target CPU utilization: 40%
+
+Scale-Up:
+When CPU usage goes above 40%, new VM instances are created automatically.
+
+Scale-Down:
+When CPU usage falls below the threshold and remains low for a cooldown period,
+extra VM instances are removed automatically.
+
+Note:
+Auto-scaling does not reduce instances immediately. Google Cloud waits several
+minutes to ensure load is truly reduced.
